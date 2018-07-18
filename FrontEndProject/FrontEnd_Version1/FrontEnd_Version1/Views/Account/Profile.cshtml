@@ -1,0 +1,353 @@
+﻿@model IEnumerable<FrontEnd_Version1.Models.UserInfo>
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+        <!--
+            Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+        -->
+        <div class="logo">
+            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                CD
+            </a>
+            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+                ACHIVERS
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li>
+                    <a href="../examples/dashboard.html">
+                        <i class="now-ui-icons design_app"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../examples/icons.html">
+                        <i class="now-ui-icons education_atom"></i>
+                        <p>Movies</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../examples/map.html">
+                        <i class="now-ui-icons location_map-big"></i>
+                        <p>Genre</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../examples/typography.html">
+                        <i class="now-ui-icons text_caps-small"></i>
+                        <p> Play List</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../examples/user.html">
+                        <i class="now-ui-icons users_single-02"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../examples/tables.html">
+                        <i class="now-ui-icons design_bullet-list-67"></i>
+                        <p>TV Series</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../examples/notifications.html">
+                        <i class="now-ui-icons ui-1_bell-53"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+                <li class="active-pro">
+                    <a href="../examples/upgrade.html">
+                        <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+                        <p>About Us</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <div class="navbar-toggle">
+                        <button type="button" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </button>
+                    </div>
+                    <div class="movie-title">
+                        <a class="navbar-brand" href="#pablo">FAST FLIX MOVIES</a>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <form>
+                        <div class="input-group no-border">
+                            <input type="text" value="" class="form-control" placeholder="Search...">
+                            <span class="input-group-addon">
+                                <i class="now-ui-icons ui-1_zoom-bold"></i>
+                            </span>
+                        </div>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pablo">
+                                <i class="now-ui-icons media-2_sound-wave"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Stats</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="now-ui-icons location_world"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Some Actions</span>
+                                </p>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pablo">
+                                <i class="now-ui-icons users_single-02"></i>
+                                <p>
+                                    <span class="d-lg-none d-md-block">Account</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="panel-header panel-header-sm">
+        </div>
+        <div class="pict-reccomend">
+
+            @*<table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MovieCategory)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movies)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.keywords)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AvLikesCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AvHeartCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AvReviewPolarity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AvThreadPolarity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movie1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movie2)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movie3)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movie4)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Movie5)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Password)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th></th>
+                </tr>*@
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6">
+                        <div class="user-profile" style="width:43em;margin-top: -57px;margin-left: -55px;height: 50em;">
+                        <div class="card-recomend" style="height: 690px;">
+
+                            <div class="card-header">
+                                @*<div class="title-profile">*@
+                                <h4 class="card-title" style="margin-left: 173px;">User Profile</h4>
+                                <div class="recomend-button" style="margin-left: 120px;">
+                                     <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" value="Recomended Movies for you!" class="btn btn-round btn-primary"onclick="@("window.location.href='" + @Url.Action("Reccomend", "Account") + "'");" />
+                                            </div>
+                                    </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Name")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.Name)</span>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Age")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.Age)</span>
+
+                                    </div>
+                                </div>
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Gender")</span><br>
+                                        @*<span>@Html.DisplayFor(modelItem => item.Gender)</span>*@
+                                        <span>@if (@item.Gender == 1)
+                                        {
+                                            <span>Male</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Female</span>
+                                        }
+                                        </span>
+                                    </div>
+                                </div>
+                                @*<div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Gender")</span><br>
+                                        <span id="progressbar">@Html.DisplayFor(modelItem => item.AvReviewPolarity)</span>
+
+                                    </div>
+                                </div>*@
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Average Polarity of comments posted in Facebook")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.AvReviewPolarity)%</span>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Average Polarity of threads posted by group of friends in Facebook")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.AvThreadPolarity)%</span>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info" style="height: 55px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Interested Movie Genres")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.MovieCategory)</span>
+                                    </div>
+
+                                </div>
+                                <div class="alert alert-info" style="height: 89px;">
+                                    <div class="recomend-index" style="font-size: 13px;">
+                                        <span>@Html.Label("Watched Movies")</span><br>
+                                        <span>@Html.DisplayFor(modelItem => item.Movies)</span>
+                                    </div>
+                                </div>
+                                
+
+
+                            </div>
+                        </div>
+                            </div>
+                    </div>
+                }
+                    @*<tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MovieCategory)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movies)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gender)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Age)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.keywords)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvLikesCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvHeartCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvReviewPolarity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvThreadPolarity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movie1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movie2)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movie3)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movie4)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Movie5)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>*@
+               
+
+            @*</table>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#progressbar').progressbar()
+    });
+    </script>

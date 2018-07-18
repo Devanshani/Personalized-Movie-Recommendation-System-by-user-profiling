@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FrontEndDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="MovieCategory" Type="nvarchar" MaxLength="255" />
+    <Property Name="Movies" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="float" />
+    <Property Name="Age" Type="float" />
+    <Property Name="keywords" Type="nvarchar(max)" />
+    <Property Name="AvLikesCount" Type="float" />
+    <Property Name="AvHeartCount" Type="float" />
+    <Property Name="AvReviewPolarity" Type="float" />
+    <Property Name="AvThreadPolarity" Type="float" />
+    <Property Name="Movie1" Type="varchar" MaxLength="255" />
+    <Property Name="Movie2" Type="varchar" MaxLength="255" />
+    <Property Name="Movie3" Type="varchar" MaxLength="255" />
+    <Property Name="Movie4" Type="varchar" MaxLength="255" />
+    <Property Name="Movie5" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="UserName" Type="varchar(max)" />
+    <Property Name="Location" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="FrontEndDBModelStoreContainer">
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

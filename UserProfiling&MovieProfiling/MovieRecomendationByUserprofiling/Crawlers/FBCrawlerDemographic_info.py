@@ -1,0 +1,28 @@
+import requests
+import random
+import time
+
+# token="EAAdAP9BYA2MBAEdghZArP4FQ3Dpf2TfjkoR8GLHm8NLtcmZA3IOpwEsm9BmUvV3HFX4UAaWdaU8SVbjKGgKJuYenEV3c9xgdcI2SuBkEMZC2mmxiOakS38OYiniwkoTgGwnyJ9mqZB7yk0GN9cZCpQujkjJBjXr6fAJDGchlJaBZCRLqxoGCXeVJpDO8RQ58vxD2QA9uJpvsqAAMjw5DZAocBWH01L9h0UZD"
+token="EAAdAP9BYA2MBAD3wSlAHvqLKgerQQPbgtrzaUQHl6XaMMmjsyJQyGRRB6u5sn9svnm39nxutWN2TCBUZC3FVZAqfDZBmNcabzjc0c4qU13v8JQYrvnndG4ZB20jUAZCUgZB38W2f3HbM4p6LbfhdsRZBsKCPCNZBuLhI3tgB81hReC5iO098M0Jxtv3AZCGsEliyh2bHLk2UimqauKMjU26ZBEyHOWShoaAKkZD"
+# token="EAAdAP9BYA2MBADYHgTqL1pb3od9yuCY54abLsPuD9IYfLypicFHvdd9110MZAGI1qhtUqlqrhxT7QtrbpWKNrCa67f0yOwbzGmA3sjAY6ZCi1jkQur4gTw64F4Tsq9cPeeZC0lQOv9S6VIukyyZAPtMzbwaTMx6yUKC84YOrQJw0RcZAASy9cTrxzhhu84dmXC8xGXFsz97hOHEotvV7hiR17nQ9zfhkZD"
+# token="EAAdAP9BYA2MBAC9nuZAWanpc4dZBwvnd9ZCfugt1TjCFToh2MIaRpsvHWYJGNl1RkclreevzaxkZAkT0dBEXlJMjdUVKzrkTnjZACAY8W3SVnj5LZACqSRwBT56TlZA55KNQXtVlk4USxiAmNRW57GnwwV42r9C305A2GkAo91IvsKuVlEzpi8CAy047ZCD1ZCeUzhDdRKlvzD8GlwcN6mRU2ml9nti17zmAZD"
+# token="EAAdAP9BYA2MBADp2ZC0IPT5sv6ONfjyj5aGNNjL7vZAtwqCMrD0djDyLqqb8rh3NvPjhjeZCMliHHmWoPDC0OoIHmrelselLQJt29c6oioeZBH165H4ZCpG1OnZCJcXTLIkeMJYn8pEBbixiZBZABJFDFZANAItz9sWuNZAQv456dWsOMvjCWVGKsfgIUnC6ZBZBfJa0OduDmV0xgnTiZC6bLSpLcVrheYxabSkIZD"
+# token="EAAdAP9BYA2MBADp2ZC0IPT5sv6ONfjyj5aGNNjL7vZAtwqCMrD0djDyLqqb8rh3NvPjhjeZCMliHHmWoPDC0OoIHmrelselLQJt29c6oioeZBH165H4ZCpG1OnZCJcXTLIkeMJYn8pEBbixiZBZABJFDFZANAItz9sWuNZAQv456dWsOMvjCWVGKsfgIUnC6ZBZBfJa0OduDmV0xgnTiZC6bLSpLcVrheYxabSkIZD"
+# token="EAAdAP9BYA2MBAB7pyGw0bdFiUG6GXTXr1BSdTJ6E3L7g9jOMthze3ZC2qRpt5kl2puHRoBXsSBt81KovvWg7lSXhWSnbKHuLIH8chJNMZArOVFoPtq2Up7wGMPhy8M3OvOXn9E0VzKHoatqgSqWMYZA4YYZBBRDBYJ2EVAfnF9IQ0kn00r5js5ZBvU7yFsdCc0dQIrc9gmYMvANumqL4pARQPULjqOvgZD"
+def req_facebook(req):
+    r=requests.get("https://graph.facebook.com/v2.10/"+req,{'access_token':token})
+    return r
+
+
+req="me?fields=id,name,age_range,gender,location,friends{gender,name,birthday}"
+# req="1450895401697551?fields=feed.limit(400){full_picture,place,from,comments{message},message,likes.limit(0).summary(true)}"
+results=req_facebook(req).json()
+print(results)
+# while True:
+#     time.sleep(random.randint(2,5))
+#     # data.extend(results['data'])
+#     r=requests.get(results['next'])
+#     results=r.json()
+#     i=+1
+# print(result['paging']['next'])
+

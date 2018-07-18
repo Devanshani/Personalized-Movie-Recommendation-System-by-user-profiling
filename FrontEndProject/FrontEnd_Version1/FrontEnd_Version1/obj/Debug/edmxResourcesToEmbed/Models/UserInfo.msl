@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FrontEndDBModelStoreContainer" CdmEntityContainer="FrontEndDB">
+    <EntitySetMapping Name="UserInfoes">
+      <EntityTypeMapping TypeName="FrontEndDBModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MovieCategory" ColumnName="MovieCategory" />
+          <ScalarProperty Name="Movies" ColumnName="Movies" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="keywords" ColumnName="keywords" />
+          <ScalarProperty Name="AvLikesCount" ColumnName="AvLikesCount" />
+          <ScalarProperty Name="AvHeartCount" ColumnName="AvHeartCount" />
+          <ScalarProperty Name="AvReviewPolarity" ColumnName="AvReviewPolarity" />
+          <ScalarProperty Name="AvThreadPolarity" ColumnName="AvThreadPolarity" />
+          <ScalarProperty Name="Movie1" ColumnName="Movie1" />
+          <ScalarProperty Name="Movie2" ColumnName="Movie2" />
+          <ScalarProperty Name="Movie3" ColumnName="Movie3" />
+          <ScalarProperty Name="Movie4" ColumnName="Movie4" />
+          <ScalarProperty Name="Movie5" ColumnName="Movie5" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
